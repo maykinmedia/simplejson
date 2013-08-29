@@ -72,7 +72,7 @@ JSONDOCS = [
     # http://json.org/JSON_checker/test/fail33.json
     '["mismatch"}',
     # http://code.google.com/p/simplejson/issues/detail?id=3
-    u'["A\u001FZ control characters in string"]',
+    '["A\u001FZ control characters in string"]',
     # misc based on coverage
     '{',
     '{]',
@@ -121,7 +121,7 @@ class TestFail(TestCase):
 
     def test_array_decoder_issue46(self):
         # http://code.google.com/p/simplejson/issues/detail?id=46
-        for doc in [u'[,]', '[,]']:
+        for doc in ['[,]', '[,]']:
             try:
                 json.loads(doc)
             except json.JSONDecodeError:
